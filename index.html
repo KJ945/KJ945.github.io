@@ -4,12 +4,29 @@
 <html>
 <head>
 <title>2HTML 背景顏色 bgcolor 與背景圖片 background 設定 - Wibibi</title>
-
+<style>
+  .blink {
+    animation-duration: 1s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+  </style>
 </head>
 <body>
 <!--<body bgcolor="#000000">
 <body bgcolor="orange">-->
   <div style="color:#00f;"> test </div>
+  <p class="blink">這行字會閃 !!!</p>
 <!--<div><img src="merry.gif" alt="" /></div>-->
 </body>
 </html>
