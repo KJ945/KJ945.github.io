@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>2HTML 背景顏色 bgcolor 與背景圖片 background 設定 - Wibibi</title>
+<link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+<style>
+    body{
+        background-image: url("safe_image.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .text {
+        width: 100%; 
+        position: absolute; 
+        color:red; 
+        z-index: 1; 
+        text-align: center; 
+        font-size: 10vw;
+        font-family: 'Charmonman', 'Black And White Picture', 'Noto Sans TC', sans-serif;
+        font-weight: 1000;
+    }
+    .blink {
+    animation-duration: 1s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    }
+    @keyframes blink {
+        from {
+            opacity: 1;
+            color: brown;
+        }
+        to {
+            opacity: 0;
+            color: blue;
+        }
+    }
+</style>
+
+</head>
+<body>
+    <div class="text blink">testtttttt</div>    
+</body>
+</html>
