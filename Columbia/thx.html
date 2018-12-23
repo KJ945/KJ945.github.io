@@ -1,48 +1,54 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<title>Merry Christmas~聖誕節快樂~~</title>
-<link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
-<style>
-    body{
-        background-image: url("MerryChristmas.gif");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .text {
-        width: 100%; 
-        position: absolute; 
-        color:red; 
-        z-index: 1; 
-        text-align: center; 
-        font-size: 10vw;
-        font-family: 'Charmonman', 'Black And White Picture', 'Noto Sans TC', sans-serif;
-        font-weight: 1000;
-    }
-    .blink {
-    animation-duration: 1s;
-    animation-name: blink;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-    }
-    @keyframes blink {
-        from {
-            opacity: 1;
-            color: brown;
-        }
-        to {
-            opacity: 0;
-            color: blue;
-        }
-    }
-</style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>~~~感謝有你~~~</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <style>
 
+    </style>
 </head>
 <body>
-    <div class="text blink">Thanks</div>    
+    <div class="first"></div>
+    <div class="content"></div>
 </body>
 </html>
+<script>  
+
+var BGPicName = ['309544.jpg', '309545.jpg', '309546.jpg'];
+
+var randomText = [
+    ['感謝財務部:', '沒有你們\n就沒有我\n的薪水'], 
+    ['感謝人資：', '讓我有工作'], 
+    ['感謝大家：', '要謝的人太多了，\n那就謝天吧！']
+    ];
+
+
+SetBackground();
+SetText();
+function SetBackground() {
+    var targetBG = Math.floor(Math.random() * BGPicName.length);
+    $('html').css({
+        "background" : "url(" + BGPicName[targetBG] + ")",
+        "background-repeat" : "no-repeat",
+        "background-size" : "cover"
+    });
+}
+
+function SetText(){
+    var targetText = Math.floor(Math.random() * randomText.length);
+    $('.first').text(randomText[targetText][0]);
+    $('<div>' + StringLineBreak(randomText[targetText][1]) + '</div>').appendTo('.content');
+}
+
+function StringLineBreak(text) {        
+    return text.replace(/\n/gi, '</div><div>');
+}
+
+</script>
