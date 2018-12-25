@@ -9,6 +9,7 @@ html, body {
     padding-left: 20vw;
     font-size: 5vw;
     font-weight: 1000;
+    font-family: 'Charmonman', 'Black And White Picture', 'Noto Sans TC', sans-serif;
 }
 
 .content {
@@ -16,4 +17,5 @@ html, body {
     font-size: 5vw;
     font-weight: 1000;
     line-height: 7vw;
+    font-family: 'Charmonman', 'Black And White Picture', 'Noto Sans TC', sans-serif;
 }
