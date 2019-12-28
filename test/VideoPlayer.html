@@ -9,63 +9,28 @@
   </head>
   <body >
     <h3>測試mp4<h3>
-    <!--
-  	參數設定[註1]
-  	autoplay: 自動播放
-  	controls: 顯示控制器
-  	poster: 預覽圖
-  	preload: 設定預載入模式
-  -->
-  <video id="my-video" class="<video></video>-js" width="360" height="240" data-setup='{ "autoplay": true, "controls": true, "poster": "", "preload": "auto" }'>
-  	<source src="https://kj945.github.io/test_mp4.mp4" type='video/mp4'>
-  	<p class="vjs-no-js">
-  		<!-- 如果使用者不支援JavaScript，顯示這段-->
-  		To view this video please enable JavaScript, and consider upgrading to a web browser that
-  		<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-  	</p>
+   <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="MY_VIDEO_POSTER.jpg"
+    data-setup="{}"
+  >
+    <source src="https://kj945.github.io/test_mp4.mp4" type="video/mp4" />
+    <source src="MY_VIDEO.webm" type="video/webm" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
   </video>
-  <br />
-  <button onclick="play()">Play</button>
-  <button onclick="pause()">Pause</button>
-  <button onclick="mute()">Mute</button>
-      <hr/>
-      <!--
-      <h3>測試avi<h3>
-      <!--
-  	參數設定[註1]
-  	autoplay: 自動播放
-  	controls: 顯示控制器
-  	poster: 預覽圖
-  	preload: 設定預載入模式
-  -->
-  <video id="my-video" class="<video></video>-js" width="360" height="240" data-setup='{ "autoplay": true, "controls": true, "poster": "", "preload": "auto" }'>
-  	<source src="https://kj945.github.io/test_avi.avi" type='video/mp4'>
-  	<p class="vjs-no-js">
-  		<!-- 如果使用者不支援JavaScript，顯示這段-->
-  		To view this video please enable JavaScript, and consider upgrading to a web browser that
-  		<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-  	</p>
-  </video>
-  <br />
-  <button onclick="play()">Play</button>
-  <button onclick="pause()">Pause</button>
-  <button onclick="mute()">Mute</button> -->
-        <script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
-    <script>
-      var videoPlayer = videojs( "my-video" );
-  	function play()
-  	{
-  		videoPlayer.play(); // 播放
-  	}
-  	function pause()
-  	{
-  		videoPlayer.pause(); // 暫停
-  	}
-  	function mute()
-  	{
-  		videoPlayer.muted( true ); // 靜音
-  	}
-    </script>
+
+  <script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
   </body>
   
 </html>
